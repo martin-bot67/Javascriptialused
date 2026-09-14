@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript ülesanded</title>
+</head>
+<body>
+    <h1>JavaScript ülesanded</h1>
+
+    <p>Temperatuur: <input id="tempInput" type="number" value="20"></p>
+    <button onclick="temperatuurUlesanne()">Vaata tulemus</button>
+    <p id="tempOutput"></p>
+
+    <p>Kasutajanimi: <input id="userInput" type="text" value="admin"></p>
+    <button onclick="kasutajaUlesanne()">Vaata tervitus</button>
+    <p id="userOutput"></p>
+
+    <p>Piletitüüp:
+        <select id="ticketType">
+            <option value="täispilet">Täispilet</option>
+            <option value="sooduspilet">Sooduspilet</option>
+        </select>
+    </p>
+    <p>Vanus: <input id="ageInput" type="number" value="30"></p>
+    <button onclick="piletUlesanne()">Arvuta hind</button>
+    <p id="ticketOutput"></p>
+
+    <p>Number: <input id="numberInput" type="number" value="5"></p>
+    <button onclick="positiivneNegatiivne()">Kuva teade</button>
+    <p id="numberOutput"></p>
+
+    <p>Broneeringute arv: <input id="bookingInput" type="number" value="3"></p>
+    <button onclick="restoranUlesanne()">Vali laud</button>
+    <p id="bookingOutput"></p>
+
+    <script src="script.js"></script>
+</body>
+</html>
