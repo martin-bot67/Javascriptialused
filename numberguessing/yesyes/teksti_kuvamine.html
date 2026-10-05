@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teksti kuvamine</title>
+    <style>
+        :root {
+            color-scheme: light;
+            font-family: Georgia, "Times New Roman", serif;
+            color: #1e3029;
+            background: #f2f5f1;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            display: grid;
+            min-height: 100vh;
+            min-height: 100svh;
+            margin: 0;
+            padding: 1.5rem;
+            place-items: center;
+        }
+
+        main {
+            width: min(100%, 44rem);
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0 0 1.5rem;
+            font-size: 2rem;
+        }
+
+        form {
+            display: flex;
+            gap: 0.6rem;
+            width: 100%;
+        }
+
+        input,
+        button {
+            min-height: 3.25rem;
+            border: 1px solid #9aaa9f;
+            border-radius: 0.35rem;
+            font: 1rem Arial, sans-serif;
+        }
+
+        input {
+            flex: 1;
+            min-width: 0;
+            padding: 0 1rem;
+            background: #fff;
+            color: #1e3029;
+        }
+
+        button {
+            padding: 0 1.2rem;
+            border-color: #176349;
+            background: #176349;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #104d39;
+        }
+
+        input:focus-visible,
+        button:focus-visible {
+            outline: 3px solid #91c5a8;
+            outline-offset: 2px;
+        }
+
+        output {
+            display: block;
+            margin-top: 2rem;
+            overflow-wrap: anywhere;
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        @media (max-width: 480px) {
+            form {
+                flex-direction: column;
+            }
+
+            output {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Teksti ekraanile</h1>
+        <form id="textForm">
+            <input id="textInput" type="text" aria-label="Sõna või lause" placeholder="Sisesta sõna või lause" required>
+            <button type="submit">Kuva tekst</button>
+        </form>
+        <output id="displayedText" aria-live="polite"></output>
+    </main>
+    <script>
+        document.getElementById('textForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            document.getElementById('displayedText').textContent = document.getElementById('textInput').value.trim();
+        });
+    </script>
+</body>
+</html>

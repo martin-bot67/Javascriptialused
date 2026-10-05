@@ -8,6 +8,28 @@
 <body>
     <h1>JavaScript ülesanded</h1>
 
+    <section>
+        <h2>Toote objekt</h2>
+        <p id="toodeValjund"></p>
+        <label for="tooteKogusInput">Uus kogus:</label>
+        <input id="tooteKogusInput" type="number" min="0" step="1" value="3">
+        <button type="button" onclick="uuendaTooteKogust()">Muuda kogust</button>
+
+        <h2>Ostukorv</h2>
+        <p>
+            <label for="uusToodeNimi">Uue toote nimi:</label>
+            <input id="uusToodeNimi" type="text" placeholder="nt Tee">
+            <label for="uusToodeHind">Hind:</label>
+            <input id="uusToodeHind" type="number" min="0" step="0.01" placeholder="0.00">
+            <label for="uusToodeKogus">Kogus:</label>
+            <input id="uusToodeKogus" type="number" min="1" step="1" value="1">
+            <button type="button" onclick="lisaOstukorvi()">Lisa ostukorvi</button>
+            <button type="button" onclick="kuvaOstukorvLehel()">Kuva ostukorv</button>
+        </p>
+        <pre id="ostukorvValjund"></pre>
+        <p id="ostukorvSummaValjund"></p>
+    </section>
+
     <p>Temperatuur: <input id="tempInput" type="number" value="20"></p>
     <button onclick="temperatuurUlesanne()">Vaata tulemus</button>
     <p id="tempOutput"></p>
@@ -41,6 +63,34 @@
     <p>Temperatuurid</p>
     <button onclick="temperatuuridUlesanne()">Kuva keskmised ja kõrgeim/madalim</button>
     <p id="temperaturesOutput"></p>
+
+    <p>Mündid</p>
+    <button onclick="mündidUlesanne()">Kuva mündid</button>
+    <p id="coinsOutput"></p>
+
+    <p>Nimi: <input id="nameInput" type="text" value="Martin"></p>
+    <button onclick="tervitaKasutajat()">Tervita kasutajat</button>
+    <p id="greetingOutput"></p>
+
+    <p>Kuupäev: <input id="dateInput" type="text" value="28.09.2026"></p>
+    <button onclick="kuupaevEesti(document.getElementById('dateInput').value)">Kuva kuupäev</button>
+    <p id="dateOutput"></p>
+
+    <p>Arvud: <input id="numberListInput" type="text" value="10, 20, 30, 40, 70, 20, 50, 10, 100"></p>
+    <button onclick="arvutaArvudFromInput()">Arvuta kogus ja keskmine</button>
+    <p id="numberListOutput"></p>
+
+    <p>Sõnum: <input id="messageInput" type="text" value="Tere maailm"></p>
+    <button onclick="showSecretMessage()">Kuva salajane sõnum</button>
+    <p id="messageOutput"></p>
+
+    <p>Nimed: <input id="namesInput" type="text" value="Kati, Mati, Kati, Mari, Mati, Jüri"></p>
+    <button onclick="showUniqueNames()">Kuva unikaalsed nimed</button>
+    <p id="namesOutput"></p>
+
+    <p>Nimi: <input id="Sisestatudnimi" type="text" value="Martin"></p>
+    <button onclick="Kasutaja()">Prindi</button>
+    <p id="KasutajaOutput"></p>
 
     <script src="script.js"></script>
 </body>
